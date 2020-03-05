@@ -13,12 +13,13 @@ export class MapComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
   	this.initMap();
+  	console.log("inition");
   }
 
   private initMap(): void {
 		this.map = L.map('map', {
     	center: [ 39.8282, -98.5795 ],
-    	zoom: 3
+    	zoom: 2
   	});
   	const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   		maxZoom: 19,

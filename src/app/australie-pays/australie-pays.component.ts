@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./australie-pays.component.css']
 })
 export class AustraliePaysComponent implements OnInit {
+	isHome: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+		console.log(this.isHome);  	
   }
 
 }

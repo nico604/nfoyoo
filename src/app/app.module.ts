@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CanadaPaysComponent } from './canada-pays/canada-pays.component';
 import { AustraliePaysComponent } from './australie-pays/australie-pays.component';
 import { MapComponent } from './map/map.component';
+import { MondeComponent } from './monde/monde.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MapComponent } from './map/map.component';
     AppComponent,
     CanadaPaysComponent,
     AustraliePaysComponent,
-    MapComponent
+    MapComponent,
+    MondeComponent
   ],
   imports: [
     BrowserModule,
