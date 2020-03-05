@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CanadaPaysComponent } from './canada-pays/canada-pays.component';
 import { AustraliePaysComponent } from './australie-pays/australie-pays.component';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CanadaPaysComponent,
-    AustraliePaysComponent
+    AustraliePaysComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
