@@ -6,14 +6,11 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-	isHome: boolean = true;
-
 
   constructor() {
  
   }
 
   ngOnInit() {
-  	console.log(this.isHome);
   }
 }

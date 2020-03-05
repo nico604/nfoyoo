@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./canada-pays.component.css']
 })
 export class CanadaPaysComponent implements OnInit {
-	isHome: boolean = false;
+	pays: string = "canada";
 
   constructor() {
  
   }
 
   ngOnInit() {
-  	console.log(this.isHome);
+  	console.log(this.pays);
   }
 
 }
