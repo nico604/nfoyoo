@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CanadaPaysComponent } from './canada-pays/canada-pays.component';
-import { AustraliePaysComponent } from './australie-pays/australie-pays.component';
-import { MondeComponent } from './monde/monde.component';
+import { AppComponent } from './app.component';
+import { PaysComponent } from './pays/pays.component';
 
 const routes: Routes = [
-	{path:'', component:MondeComponent},
-	{path:'Canada',component:CanadaPaysComponent},
-	{path:'Australie',component:AustraliePaysComponent}
+	//{path:'Canada',component:CanadaPaysComponent},
+	//{path:'Australie',component:AustraliePaysComponent}
+{ path: 'pays/:name', component: PaysComponent }
 ];
 
 @NgModule({

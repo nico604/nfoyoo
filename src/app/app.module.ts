@@ -1,28 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { MapComponent } from './map/map.component';
+import { OrganismService } from 'src/app/organism.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
-import { CanadaPaysComponent } from './canada-pays/canada-pays.component';
-import { AustraliePaysComponent } from './australie-pays/australie-pays.component';
-import { MapComponent } from './map/map.component';
-import { MondeComponent } from './monde/monde.component';
+import { environment } from '../environments/environment';
+import { OrganismListComponent } from './organism-list/organism-list.component';
+import { PaysComponent } from './pays/pays.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CanadaPaysComponent,
-    AustraliePaysComponent,
     MapComponent,
-    MondeComponent
+    AppComponent,
+    OrganismListComponent,
+    PaysComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [OrganismService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

@@ -5,10 +5,19 @@
 	</a>
 </header>
 
+<app-map>
 	
-<router-outlet>
+</app-map>
 
-<app-map></app-map>
+<nav *ngIf="name">
+	<ul class="pays">
+		<li *ngFor="let p of pays">
+			<a routerLink="/pays/{{p.name}}">{{p.name}}</a>
+		</li>
+	</ul>
+</nav>
+
+<router-outlet>
 	
 
 </router-outlet>
