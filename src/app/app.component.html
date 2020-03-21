@@ -8,15 +8,13 @@
 <app-map>
 	
 </app-map>
-{{ name }}
-<nav *ngIf="!name">
+<nav *ngIf="menuAfficher()">
 	<ul class="pays">
 		<li *ngFor="let p of pays">
 			<a routerLink="/pays/{{p.name}}">{{p.name}}</a>
 		</li>
 	</ul>
 </nav>
-
 <router-outlet>
 	
 

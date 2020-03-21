@@ -7,6 +7,8 @@ import { Pays } from 'src/app/pays';
 import { Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { OrganismListComponent } from './organism-list/organism-list.component';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -18,15 +20,28 @@ export class AppComponent implements OnInit {
 	
   title = "directory";
   pays: Pays[];
-  
-  constructor(private og: OrganismService) { }
+
+  constructor(
+    private og: OrganismService,
+    private route: ActivatedRoute,
+    private location: Location,
+    ) { }
 
   ngOnInit() {
     this.getPays();
     console.log("init app");
   }
 
-  getPays(): void{
+  getPays(): void {
     this.pays = this.og.getPays();
   }
+  menuAfficher() {
+    //console.log(this.location.path());
+    if(this.location.path() == "" ){
+      console.log("allo");
+      return false
+    }
+  }
+
 }
+

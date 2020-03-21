@@ -24,6 +24,7 @@ export class PaysComponent implements OnInit {
   salutPays() {
   	this.route.paramMap.subscribe(params => {
       this.name = params.get('name');
+        console.log(params.has('name'));
     })
   }
 
