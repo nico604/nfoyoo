@@ -9,6 +9,9 @@ import { Location } from '@angular/common';
 })
 
 export class PaysComponent implements OnInit {
+
+  name: string;
+
   constructor(
   	private route: ActivatedRoute,
 	  private location: Location,
@@ -19,9 +22,9 @@ export class PaysComponent implements OnInit {
 
   }
   salutPays() {
-  	  const name = this.route.snapshot.paramMap.get('name');
-  	  this.name = name;
-  	  return name;
+  	this.route.paramMap.subscribe(params => {
+      this.name = params.get('name');
+    })
   }
 
 }
