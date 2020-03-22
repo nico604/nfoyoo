@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { OrganismListComponent } from './organism-list/organism-list.component';
 import { PaysComponent } from './pays/pays.component';
+import { WorldComponent } from './world/world.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PaysComponent } from './pays/pays.component';
     MapComponent,
     AppComponent,
     OrganismListComponent,
-    PaysComponent
+    PaysComponent,
+    WorldComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<p>world works!</p>
+<nav>
+	<ul class="pays">
+		<li *ngFor="let p of pays">
+			<a routerLink="/pays/{{p.name}}">{{p.name}}</a>
+		</li>
+	</ul>
+</nav>
