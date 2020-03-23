@@ -1,19 +1,29 @@
-import { Component, AfterViewInit } from '@angular/core';
+
+import { Component, AfterViewInit, Input } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: ['./map.component.css']  
 })
+
 export class MapComponent implements AfterViewInit {
-	private map;
+	
+  @Input()
+  set name(name: string) {
+    this._name = (name && name.trim()) || '<no name set>';
+  }
+
+  get name(): string { return this._name; }
+  
+  private map;
 
   constructor() { }
 
   ngAfterViewInit(): void {
   	this.initMap();
-  	console.log("inition");
+  	console.log("Map init");
   }
 
   private initMap(): void {
@@ -29,6 +39,6 @@ export class MapComponent implements AfterViewInit {
 		tiles.addTo(this.map);
   
 	}
-
+  
 
 }

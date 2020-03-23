@@ -30,5 +30,10 @@ export class PaysComponent implements OnInit {
       console.log(params.has('name'));
     })
   }
+  
+  gotoHeroes() {
+    this.router.navigate(['/']);
+  }
+
 
 }
