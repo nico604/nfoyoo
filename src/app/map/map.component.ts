@@ -9,13 +9,6 @@ import * as L from 'leaflet';
 })
 
 export class MapComponent implements AfterViewInit {
-	
-  @Input()
-  set name(name: string) {
-    this._name = (name && name.trim()) || '<no name set>';
-  }
-
-  get name(): string { return this._name; }
   
   private map;
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MessageService } from '../message.service';
 
@@ -16,7 +16,8 @@ export class PaysComponent implements OnInit {
   constructor(
   	private route: ActivatedRoute,
 	  private location: Location,
-    private enAction: MessageService
+    private enAction: MessageService,
+    private router: Router
 	) { }
 
   ngOnInit() {
