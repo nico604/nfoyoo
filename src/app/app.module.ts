@@ -12,6 +12,7 @@ import { OrganismService } from 'src/app/organism.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { environment } from '../environments/environment';
 import { OrganismListComponent } from './organism-list/organism-list.component';
 import { PaysComponent } from './pays/pays.component';
@@ -32,7 +33,8 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireDatabaseModule
+      AngularFireDatabaseModule,
+    LeafletModule.forRoot()
   ],
   providers: [OrganismService],
   bootstrap: [AppComponent]

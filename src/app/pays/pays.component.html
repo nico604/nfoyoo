@@ -1,3 +1,7 @@
 <a routerLink="/">Retour à la carte du monde. </a>
-<app-map></app-map>
+<!-- <app-map></app-map> -->
+<div style="height: 300px;"
+     leaflet 
+     [leafletOptions]="options">
+</div>
 <h1>La page de {{ name }}</h1>
